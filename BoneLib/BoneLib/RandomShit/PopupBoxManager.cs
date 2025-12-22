@@ -252,6 +252,7 @@ namespace BoneLib.RandomShit
                     ModConsole.Error("Exception whilst invoking image popup callback with null to signify error.", LoggingMode.NORMAL);
                     ModConsole.Msg($"Failed to deserialize the response JSON, exception:\n{ex}", LoggingMode.DEBUG);
                 }
+                yield break;
             }
 
             UnityWebRequest imageReq = UnityWebRequest.Get(imageUrl);
